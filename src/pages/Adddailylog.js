@@ -195,6 +195,13 @@ const Adddailylog = () => {
 
                 <Box boxShadow='2xl' p='6' rounded='md' bg='white' mt={6}>
                     <Accordion allowToggle >
+                        <CustomAccordianItem name="Science and Technology" />
+                    </Accordion>
+
+                </Box>
+
+                <Box boxShadow='2xl' p='6' rounded='md' bg='white' mt={6}>
+                    <Accordion allowToggle >
                         <CustomAccordianItem name="Current Affairs" />
                     </Accordion>
 
