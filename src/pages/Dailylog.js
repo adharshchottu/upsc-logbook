@@ -89,6 +89,8 @@ const Entrylist = (props) => {
 
 const Subjectwiselist = (props) => {
 
+    const processData = props.data.sort((a,b) => a.date - b.date)
+
     const InsideList = (props) => {
         const rawdata = props.data;
         return <> {
@@ -100,7 +102,7 @@ const Subjectwiselist = (props) => {
     }
 
     return <>
-        {props.data.map((d) => {
+        {processData.map((d) => {
             return <Box key={`${d.date}4`}>
                 <Heading as='h5' size='sm'>{`${d.date.substring(0, 2)}-${d.date.substring(2, 4)}-${d.date.substring(4)}`}</Heading>
                 <Box ms={4} mb={4}>
@@ -123,7 +125,9 @@ const Subjectwiselist = (props) => {
 const Datewise = (props) => {
     const dataFromContext = useContext(DataContext)
     const rawdata = dataFromContext[props.author];
-    const data = rawdata && Object.keys(rawdata).map((key) => ({ "date": `${String(key).substring(0, 2)}-${months[Number(String(key).substring(2, 4)) - 1]}-${String(key).substring(4)}`, "data": rawdata[key] }))
+    const data = rawdata && Object.keys(rawdata)
+        .map((key) => ({ "date": `${String(key).substring(0, 2)}-${months[Number(String(key).substring(2, 4)) - 1]}-${String(key).substring(4)}`, "data": rawdata[key], "order": key }))
+        .sort((a, b) => a.order - b.order)
 
     return <>
         {
@@ -149,7 +153,7 @@ const Subjectwise = (props) => {
         "Physical Geography", "Indian Geography", "Human Geography", "World Geography",
         "Indian Polity", "Indian Economy", "Indian Society", "Internal Security",
         "Governance", "International Relations", "Disaster Management",
-        "Environment", "Ethics"
+        "Environment", "Science and Technology", "Ethics"
     ];
     const dataFromContext = useContext(DataContext)
     const rawdata = dataFromContext[props.author]
@@ -168,7 +172,7 @@ const Subjectwise = (props) => {
 
     return <>
         <Tabs size='sm'>
-            <Box style={{"overflowX":"scroll"}}>
+            <Box style={{ "overflowX": "scroll" }}>
                 <TabList>
                     {subjects.map((d) => { return (<Tab key={d}>{d}</Tab>) })}
                 </TabList>
@@ -267,10 +271,7 @@ const Dailylog = () => {
                         const dateKey = Object.keys(e)[0]
                         return { [dateKey]: entries }
                     })
-                    .sort((a,b) => {
-                        return (Object.keys(a)[0]>Object.keys(b)[0])?1:-1;
-                    })
-                    .reduce((c, v) => ({ ...c, ...v }), {})
+                        .reduce((c, v) => ({ ...c, ...v }), {})
                     return { [d.id]: refinedSubjectEntries }
                 }
                 else {
