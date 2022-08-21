@@ -1,16 +1,25 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Button, useBreakpointValue, Flex, ButtonGroup, Menu, MenuButton, MenuItem, MenuList, Box, Spacer, Text, HStack } from '@chakra-ui/react'
 import { FirebaseContext } from '../contexts/FirebaseContext'
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 
 const MenuListDesktop = (props) => {
-    return <Link to={`${props.href}`}>
-        <Button colorScheme='teal' variant={'solid'} borderRadius={15}>
-            {props.name}
-        </Button>
-    </Link>
+    if (props.external) {
+        return <a href={`${props.href}`}>
+            <Button colorScheme='teal' variant={'solid'} borderRadius={15}>
+                {props.name}
+            </Button>
+        </a>
+    }
+    else {
+        return <Link to={`${props.href}`}>
+            <Button colorScheme='teal' variant={'solid'} borderRadius={15}>
+                {props.name}
+            </Button>
+        </Link>
+    }
 }
 
 const MenuListSignIn = (props) => {
@@ -33,6 +42,31 @@ const MenuListSignIn = (props) => {
     </>
 }
 
+const MenuListOptional = (props) => {
+    const menuLocation = props.menu;
+    const user = useContext(FirebaseContext);
+    const [optional, setOptional] = useState("")
+    useEffect(() => {
+        if (user.user) {
+            if (user.user.uid === "WmXUrn2k82bnnlgyHkiEgeKtzau1") setOptional("Anthropology")
+            else if (user.user.uid === "lKkzOLyHSJatiy919w5IKPSkaLU2") setOptional("Physics")
+        }
+    }, [user.user])
+    let navigate = useNavigate();
+    const navigateTo = () => {
+        navigate("/optional", { replace: true });
+    }
+
+    return <>
+        {
+            (user.user) && (menuLocation === "mobile" ?
+                <MenuItem onClick={navigateTo}>{optional}</MenuItem> :
+                <Button onClick={navigateTo} colorScheme='teal' variant={'solid'} borderRadius={15}>{optional}</Button>)
+        }
+
+    </>
+}
+
 const CollapseMenu = () => {
 
     return (<>
@@ -46,7 +80,8 @@ const CollapseMenu = () => {
                         <MenuListSignIn menu="mobile" />
                         <Link to="/"><MenuItem>Why</MenuItem></Link>
                         <Link to="/dailylog"><MenuItem>Daily log</MenuItem></Link>
-                        <Link to="/write"><MenuItem>Write</MenuItem></Link>
+                        <a href="https://dodb.cu.ma"><MenuItem>Write</MenuItem></a>
+                        <MenuListOptional menu="mobile" />
                     </MenuList>
                 </>
             )}
@@ -59,8 +94,9 @@ const DesktopMenu = () => {
         <ButtonGroup gap='2'>
             <MenuListSignIn menu="desktop" />
             <MenuListDesktop name="Why" href="/" />
+            <MenuListOptional menu="desktop" />
             <MenuListDesktop name="Daily log" href="/dailylog" />
-            <MenuListDesktop name="Write" href="/write" />
+            <MenuListDesktop name="Write" href="https://dodb.cu.ma" external={true} />
         </ButtonGroup>
     </>
 }
@@ -96,7 +132,7 @@ const Navbar = () => {
                 }
             }
 
-        }, [evanDays,auguDays])
+        }, [evanDays, auguDays])
 
         return <>
             {
