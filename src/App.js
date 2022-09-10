@@ -6,12 +6,14 @@ import { Route, Routes } from 'react-router-dom'
 import Dailylog from './pages/Dailylog'
 import { FirebaseContextProvider } from './contexts/FirebaseContext'
 import Optional from './pages/Optional'
+import Quotebar from './Components/Quotebar'
 
 function App() {
 
   return <>
     <FirebaseContextProvider>
       <Navbar />
+      <Quotebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dailylog" element={<Dailylog />} />
