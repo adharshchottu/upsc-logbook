@@ -116,7 +116,7 @@ const Navbar = () => {
         const oneDay = 24 * 60 * 60 * 1000;
         const today = new Date();
         const evanDate = new Date(2022, 11, 31);
-        const auguDate = new Date(2024, 5, 31);
+        const auguDate = new Date(2023, 11, 31);
         const evanDays = Math.round((evanDate - today) / oneDay);
         const auguDays = Math.round((auguDate - today) / oneDay);
 
