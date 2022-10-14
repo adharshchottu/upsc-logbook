@@ -80,6 +80,7 @@ const CollapseMenu = () => {
                         <MenuListSignIn menu="mobile" />
                         <Link to="/"><MenuItem>Why</MenuItem></Link>
                         <Link to="/dailylog"><MenuItem>Daily log</MenuItem></Link>
+                        <Link to="/resources"><MenuItem>Resources</MenuItem></Link>
                         <a href="https://adharshchottu.github.io/upsc-notes/"><MenuItem>Write</MenuItem></a>
                         <MenuListOptional menu="mobile" />
                     </MenuList>
@@ -96,6 +97,7 @@ const DesktopMenu = () => {
             <MenuListDesktop name="Why" href="/" />
             <MenuListOptional menu="desktop" />
             <MenuListDesktop name="Daily log" href="/dailylog" />
+            <MenuListDesktop name="Resources" href="/resources" />
             <MenuListDesktop name="Write" href="https://adharshchottu.github.io/upsc-notes/" external={true} />
         </ButtonGroup>
     </>
