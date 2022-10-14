@@ -8,6 +8,7 @@ import { FirebaseContextProvider } from './contexts/FirebaseContext'
 import Optional from './pages/Optional'
 import Quotebar from './Components/Quotebar'
 import { Helmet } from 'react-helmet'
+import Resources from './pages/Resources'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/dailylog" element={<Dailylog />} />
         <Route path="/optional" element={<Optional />} />
         <Route path="/adddailylog" element={<Adddailylog />} />
+        <Route path="/resources" element={<Resources />} />
       </Routes>
       <Footer />
     </FirebaseContextProvider>
