@@ -69,7 +69,7 @@ const Resources = () => {
                         <AccordionPanel>
                             <OrderedList>
                                 <ListItem>PMF IAS</ListItem>
-                                <ListItem>Amen Sengupta</ListItem>
+                                <ListItem>Amit Sengupta</ListItem>
                             </OrderedList>
                         </AccordionPanel>
                     </AccordionItem>
@@ -113,6 +113,27 @@ const Resources = () => {
                                 <ListItem>The Indian Economy - Sanjiv Verma </ListItem>
                                 <ListItem>Indian Economy - Mishra and Puri</ListItem>
                                 <ListItem>Indian Economy Since Independence - Uma Kapila</ListItem>
+                            </OrderedList>
+                        </AccordionPanel>
+                    </AccordionItem>
+                </Accordion>
+            </Box>
+            <Box m={5}>
+                <Accordion allowToggle>
+                    <AccordionItem>
+                        <h2>
+                            <AccordionButton _expanded={{ bg: 'LimeGreen', color: 'white' }}>
+                                <Box flex='1' textAlign='left'>
+                                    Ethics
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                        </h2>
+                        <AccordionPanel>
+                            <OrderedList>
+                                <ListItem>Ethics, Integrity and Aptitude - Atul garg</ListItem>
+                                <ListItem>Case studies - Ethical dilemma of a civil servant</ListItem>
+                                <ListItem>Small things matter - Deepak Gupta</ListItem>
                             </OrderedList>
                         </AccordionPanel>
                     </AccordionItem>
