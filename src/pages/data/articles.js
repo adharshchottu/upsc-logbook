@@ -1,111 +1,261 @@
 export const articles = [
     {
         "articleNo": "1",
-        "article": `Name and territory of the Union`,
-        "part": "1"
-    },
-    {
-        "articleNo": "1(1)",
-        "article": `India, that is Bharat, shall be a Union of States`,
-        "part": "1"
-    },
-    {
-        "articleNo": "1(2)",
-        "article": `It shall be a Federation consisting of territories specified in the First Schedule`,
-        "part": "1"
-    },
-    {
-        "articleNo": "1(3)",
-        "article": `The territory of India shall comprise- (a) the territories of the states; (b) the Union territories.`,
+        "article": `India, that is Bharat, shall be a Union of States.`,
         "part": "1"
     },
     {
         "articleNo": "2",
-        "article": `Admission or establishment of new States`,
-        "part": "1"
-    },
-    {
-        "articleNo": "2(1)",
-        "article": `Parliament may by law admit into the Union, or establish, new States on such terms and conditions as it thinks fit`,
-        "part": "1"
-    },
-    {
-        "articleNo": "2(2)",
-        "article": `No new State shall be formed or be received into the Union without the consent of the States concerned.`,
-        "part": "1"
-    },
-    {
-        "articleNo": "2(3)",
-        "article": `A Law referred to in clause (1) shall not be deemed to be an amendment of the Constitution for the purpose of Article 368.`,
+        "article": `The President of India has the power to admit new states or territories 
+        into the union and to set the terms and conditions for doing so.`,
         "part": "1"
     },
     {
         "articleNo": "3",
-        "article": `Formation of new States and alteration of areas, boundares or names of existing States.`,
-        "part": "1"
-    },
-    {
-        "articleNo": "3(1)",
-        "article": `Parliament can make laws to create new states by separating territory from existing states, 
-        merging multiple states or parts of states, or by attaching new territory to existing states.`,
-        "part": "1"
-    },
-    {
-        "articleNo": "3(2)",
-        "article": `If a bill to change the boundaries of any state is introduced in the Lok Sabha, 
-        the President must get the views of the state's legislative assembly before giving his assent to the bill.`,
-        "part": "1"
-    },
-    {
-        "articleNo": "3(3)",
-        "article": `Parliament can also make laws to create new Union territories by separating territory from 
-        states or merging multiple Union territories or parts of states or Union territories, or attaching 
-        new territory to existing Union territories.`,
-        "part": "1"
-    },
-    {
-        "articleNo": "3(4)",
-        "article": `The laws made under clause 1 can also include additional rules that Parliament deems necessary.`,
-        "part": "1"
-    },
-    {
-        "articleNo": "3(5)",
-        "article": `These laws will not be considered an amendment to the Constitution as per Article 368.`,
+        "article": `The Parliament of India has the power to create new states and territories, 
+        and to change the boundaries, names, or areas of existing states and territories.`,
         "part": "1"
     },
     {
         "articleNo": "4",
-        "article": `Laws made under articles 2 and 3 to provide for the alteration of the areas, boundres or 
-        names of States to be reserved for consideration of the President and not to be questioned in any court`,
+        "article": `Any laws created under Article 2 and 3 must follow the rest of the Constitution, 
+        and cannot be used to take away citizens' rights or undermine the democratic and secular nature of India.`,
         "part": "1"
     },
     {
-        "articleNo": "4(1)",
-        "article": `The laws made under Article 2 and Article 3 will have the force of a Constitution law and will not be questioned in any court.`,
-        "part": "1"
+        "articleNo": "5",
+        "article": `Citizenship at the commencement of the Constitution.`,
+        "part": "2"
     },
     {
-        "articleNo": "4(2)",
-        "article": `The laws made under Article 2 and Article 3 will be effective immediately after the President 
-        gives his assent to the bill, and the President can also make rules for their implementation.`,
-        "part": "1"
+        "articleNo": "6",
+        "article": `Rights of citizenship of certain persons who have migrated to India from Pakistan.`,
+        "part": "2"
     },
     {
-        "articleNo": "4(3)",
-        "article": `the President can ask any state affected by a law made under Article 2 and Article 3 to 
-        express its views on the law, and he must consider those views before giving his assent to the bill.`,
-        "part": "1"
+        "articleNo": "7",
+        "article": `Rights of citizenship of certain migrants to Pakistan.`,
+        "part": "2"
     },
     {
-        "articleNo": "4(4)",
-        "article": `If a law made under Article 2 and Article 3 affects the boundaries of a state, 
-        the President must refer the bill to the legislative assembly of the state for its views.`,
-        "part": "1"
+        "articleNo": "8",
+        "article": `Rights of citizenship of certain persons of Indian origin residing outside India.`,
+        "part": "2"
     },
     {
-        "articleNo": "4(5)",
-        "article": `if the President is satisfied that any provision of a law made under Article 2 or Article 3 
-        needs modification, the President may by order make such modifications in that law.`,
-        "part": "1"
+        "articleNo": "9",
+        "article": `Persons voluntarily acquiring citizenship of a foreign State not to be citizens.`,
+        "part": "2"
+    },
+    {
+        "articleNo": "10",
+        "article": `Continuance of the rights of citizenship.`,
+        "part": "2"
+    },
+    {
+        "articleNo": "11",
+        "article": `Parliament to regulate the right of citizenship by law.`,
+        "part": "2"
+    },
+    {
+        "articleNo": "12",
+        "article": `Definition of the state`,
+        "part": "3"
+    },
+    {
+        "articleNo": "13",
+        "article": `Laws inconsistent with or in derogation of the fundamental rights`,
+        "part": "3"
+    },
+    {
+        "articleNo": "14",
+        "article": `The State shall not deny to any person equality before the 
+        law or the equal protection of the laws within the territory of India.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "15",
+        "article": `Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "16",
+        "article": `Equality of opportunity in matters of public employment.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "17",
+        "article": `“Untouchability” is abolished and its practice in any form is forbidden. 
+        The enforcement of any disability arising out of “Untouchability” shall be an offence 
+        punishable in accordance with law`,
+        "part": "3"
+    },
+    {
+        "articleNo": "18",
+        "article": `Abolition of titles.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "19",
+        "article": `Protection of certain rights regarding freedom of speech, etc.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "19(1)(A)",
+        "article": `All citizens shall have the right to freedom of speech and expression;`,
+        "part": "3"
+    },
+    {
+        "articleNo": "19(1)(B)",
+        "article": `All citizens shall have the right to assemble peaceably and without arms;`,
+        "part": "3"
+    },
+    {
+        "articleNo": "19(1)(C)",
+        "article": `All citizens shall have the right to form associations or unions;`,
+        "part": "3"
+    },
+    {
+        "articleNo": "19(1)(D)",
+        "article": `All citizens shall have the right to move freely throughout the territory of India;`,
+        "part": "3"
+    },
+    {
+        "articleNo": "19(1)(E)",
+        "article": `All citizens shall have the right to reside and settle in any part of the territory of India;`,
+        "part": "3"
+    },
+    {
+        "articleNo": "19(1)(G)",
+        "article": `All citizens shall have the right to practise any profession, 
+        or to carry on any occupation, trade or business.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "20",
+        "article": `Protection in respect of conviction for offences.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "21",
+        "article": `No person shall be deprived of his life or personal liberty except 
+        according to procedure established by law.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "21(A)",
+        "article": `The State shall provide free and compulsory education to all children 
+        of the age of six to fourteen years in such manner as the State may, by law, determine`,
+        "part": "3"
+    },
+    {
+        "articleNo": "22",
+        "article": `Protection against arrest and detention in certain cases.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "23",
+        "article": `Prohibition of traffic in human beings and forced labour.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "24",
+        "article": `No child below the age of fourteen years shall be employed to work 
+        in any factory or mine or engaged in any other hazardous employment.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "25",
+        "article": `Freedom of conscience and free profession, practice and propagation of religion.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "26",
+        "article": `Freedom to manage religious affairs.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "27",
+        "article": `No person shall be compelled to pay any taxes, the proceeds of 
+        which are specifically appropriated in payment of expenses for the promotion 
+        or maintenance of any particular religion or religious denomination.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "28",
+        "article": `Freedom as to attendance at religious instruction or religious 
+        worship in certain educational institutions.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "29",
+        "article": `Protection of interests of minorities.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "29(1)",
+        "article": `Any section of the citizens residing in the territory of India or 
+        any part thereof having a distinct language, script or culture of its own 
+        shall have the right to conserve the same.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "29(2)",
+        "article": `No citizen shall be denied admission into any educational institution 
+        maintained by the State or receiving aid out of State funds on grounds only 
+        of religion, race, caste, language or any of them.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "30",
+        "article": `Right of minorities to establish and administer educational institutions.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "32",
+        "article": `Remedies for enforcement of rights conferred by this Part.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "32(1)",
+        "article": `The right to move the Supreme Court by appropriate proceedings 
+        for the enforcement of the rights conferred by this Part is guaranteed.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "32(2)",
+        "article": `The Supreme Court shall have power to issue directions or orders or writs, 
+        including writs in the nature of habeas corpus, mandamus, prohibition, quo warranto 
+        and certiorari, whichever may be appropriate, for the enforcement of any of the rights 
+        conferred by this Part.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "32(3)",
+        "article": `Without prejudice to the powers conferred on the Supreme Court by clauses 
+        (1) and (2), Parliament may by law empower any other court to exercise within the local 
+        limits of its jurisdiction all or any of the powers exercisable by the 
+        Supreme Court under clause (2).`,
+        "part": "3"
+    },
+    {
+        "articleNo": "32(4)",
+        "article": `The right guaranteed by this article shall not be suspended except as otherwise provided for by this Constitution.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "33",
+        "article": `Power of Parliament to modify the rights conferred by this Part in their application to Forces, etc.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "34",
+        "article": `Restriction on rights conferred by this Part while martial law is in force in any area.`,
+        "part": "3"
+    },
+    {
+        "articleNo": "35",
+        "article": `Legislation to give effect to the provisions of this Part.`,
+        "part": "3"
     }
 ]
