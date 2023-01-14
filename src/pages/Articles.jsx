@@ -83,7 +83,7 @@ const Articles = () => {
         }
         const filteredData = filterData(filter, articles)
         setData(filteredData)
-    })
+    },[filter])
 
     return <>
         <Center my={"4"}>
