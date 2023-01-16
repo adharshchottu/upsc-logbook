@@ -2,19 +2,24 @@ import { Badge, Box, Center, Checkbox, Grid, GridItem, Stack, Text } from "@chak
 import { useEffect } from "react";
 import { useState } from "react";
 import { articles } from "./data/articles";
+import { parts } from "./data/parts";
 
 const Articles = () => {
     const intialState = { articles: true, clauses: true, subclauses: true }
-    const [filter, setFilter] = useState(intialState)
+    const intialPartState = Object.assign({}, ...[...parts.keys()].map((d) => ({ [d]: true })));
+    const [filter, setFilter] = useState(intialState);
+    const [partFilter, setPartFilter] = useState(intialPartState);
 
     const [data, setData] = useState(articles)
 
     const ArticleBox = (props) => {
+        const partColor = parts.get(props.part).color;
         const marginLeft = props.articleNo.indexOf("(") == "-1" ? 0 : (props.articleNo.indexOf(")(") == "-1" ? 3 : 6);
-        const bgColor = props.articleNo.indexOf("(") == "-1" ? "whatsapp.500" : (props.articleNo.indexOf(")(") == "-1" ? "whatsapp.300" : "whatsapp.100");
-        
+        const bgColor = props.articleNo.indexOf("(") == "-1" ? partColor : (props.articleNo.indexOf(")(") == "-1" ? partColor : partColor);
+        const bgFilter = props.articleNo.indexOf("(") == "-1" ? "filter:brightness(1)" : (props.articleNo.indexOf(")(") == "-1" ? "filter:brightness(1.5)" : "filter:brightness(1.8)");
+
         return <>
-            <Box maxW='container.xl' minW={[0, 'container.xl']} borderWidth='1px' borderRadius='lg' overflow='hidden' my={4} marginLeft={marginLeft} bg={bgColor} >
+            <Box maxW='container.xl' minW={[0, 'container.xl']} borderWidth='1px' borderRadius='lg' overflow='hidden' my={4} marginLeft={marginLeft} bg={bgColor} css={bgFilter}>
 
                 <Box p='6'>
                     <Box display='flex' alignItems='baseline'>
@@ -59,6 +64,35 @@ const Articles = () => {
 
     }
 
+    const Parts = () => {
+        const partsObject = Array.from(parts).map(d => {
+            return { partNo: d[0], ...d[1] }
+        })
+
+        const handleCheckboxChange = (key) => {
+            const newCheckboxes = { ...partFilter };
+            newCheckboxes[key] = !newCheckboxes[key];
+            setPartFilter(newCheckboxes);
+        }
+
+        const PartsList = (props) => {
+            return <>
+                <Checkbox size='lg' colorScheme='whatsapp' isChecked={partFilter[props.partNo]} onChange={(e) => handleCheckboxChange(props.partNo)}>
+                    <Box color={props.color}>Part {props.partNo}: {props.item}</Box>
+                </Checkbox>
+            </>
+        }
+
+
+        return <>
+            <Center>
+                <Grid templateColumns='repeat(2, 1fr)' gap={3} my={"6"} mx={6}>
+                    {partsObject.map((d) => <PartsList item={d.part} partNo={d.partNo} key={d.partNo} color={d.color} />)}
+                </Grid>
+            </Center>
+        </>
+    }
+
     useEffect(() => {
         const filterData = (filter, data) => {
             const filterArticles = data.filter((d) => {
@@ -70,6 +104,7 @@ const Articles = () => {
             const filterSubclauses = data.filter((d) => {
                 return (d.articleNo.indexOf(")(") != "-1") && filter.subclauses
             })
+            // console.log(filterArticles, filterClauses, filterSubclauses)
             const unSorted = [...filterArticles, ...filterClauses, ...filterSubclauses]
             const sorted = unSorted.sort(function (a, b) {
                 let aNum = parseInt(a.articleNo.match(/\d+/)[0]);
@@ -82,8 +117,16 @@ const Articles = () => {
             return sorted;
         }
         const filteredData = filterData(filter, articles)
-        setData(filteredData)
-    },[filter])
+
+        const filterDataForParts = (partFilter, data) => {
+            const filterData = data.filter((d) => {
+                return partFilter[d.part]
+            })
+            return [...filterData]
+        }
+        const filteredDataForPart = filterDataForParts(partFilter, filteredData)
+        setData(filteredDataForPart)
+    }, [filter, partFilter])
 
     return <>
         <Center my={"4"}>
@@ -112,6 +155,7 @@ const Articles = () => {
                 </Checkbox>
             </Stack>
         </Center>
+        <Parts />
         <Grid
             templateColumns='10px 30px 1fr'
             m={"2"}
