@@ -10,6 +10,8 @@ import Quotebar from './Components/Quotebar'
 import { Helmet } from 'react-helmet'
 import Resources from './pages/Resources'
 import Articles from './pages/Articles'
+import { BackToTop } from './Components/Back-to-top'
+
 
 function App() {
 
@@ -39,6 +41,7 @@ function App() {
       </Routes>
       <Footer />
     </FirebaseContextProvider>
+    <BackToTop />
   </>
 
 
