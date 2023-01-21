@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet'
 import Resources from './pages/Resources'
 import Articles from './pages/Articles'
 import { BackToTop } from './Components/Back-to-top'
+import History from './pages/History'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/adddailylog" element={<Adddailylog />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/history" element={<History />} />
       </Routes>
       <Footer />
     </FirebaseContextProvider>

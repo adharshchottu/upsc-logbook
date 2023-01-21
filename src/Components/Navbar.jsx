@@ -81,6 +81,7 @@ const CollapseMenu = () => {
                         <Link to="/"><MenuItem>Why</MenuItem></Link>
                         <Link to="/dailylog"><MenuItem>Daily log</MenuItem></Link>
                         <Link to="/articles"><MenuItem>Articles</MenuItem></Link>
+                        <Link to="/history"><MenuItem>History</MenuItem></Link>
                         <Link to="/resources"><MenuItem>Resources</MenuItem></Link>
                         <a href="https://adharshchottu.github.io/upsc-notes/"><MenuItem>Write</MenuItem></a>
                         <MenuListOptional menu="mobile" />
@@ -99,6 +100,7 @@ const DesktopMenu = () => {
             <MenuListOptional menu="desktop" />
             <MenuListDesktop name="Daily log" href="/dailylog" />
             <MenuListDesktop name="Articles" href="/articles" />
+            <MenuListDesktop name="History" href="/history" />
             <MenuListDesktop name="Resources" href="/resources" />
             <MenuListDesktop name="Write" href="https://adharshchottu.github.io/upsc-notes/" external={true} />
         </ButtonGroup>
