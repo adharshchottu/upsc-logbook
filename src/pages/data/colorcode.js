@@ -1,0 +1,15 @@
+export const colorCode = [
+    "green.400",
+    "blue.400",
+    "cyan",
+    "gray.300",
+    "orange",
+    "telegram.400",
+    "purple.500",
+    "yellow",
+    "linkedin.500",
+    "facebook.200",
+    "messenger.500",
+    "whatsapp.500",
+    "twitter.500",
+    "pink"]
