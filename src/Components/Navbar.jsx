@@ -121,7 +121,7 @@ const Navbar = () => {
         // days left
         const oneDay = 24 * 60 * 60 * 1000;
         const today = new Date();
-        const evanDate = new Date(2022, 11, 31);
+        const evanDate = new Date(2023, 4, 27);
         const auguDate = new Date(2023, 11, 31);
         const evanDays = Math.round((evanDate - today) / oneDay);
         const auguDays = Math.round((auguDate - today) / oneDay);
@@ -145,7 +145,7 @@ const Navbar = () => {
                 daysLeft.days > 0
                     ?
                     <HStack>
-                        <Text fontSize={['xl', '3xl']} color="green">{daysLeft.author} you have </Text><Text fontSize={['3xl', '5xl']} color="red" fontWeight="bold">{daysLeft.days}</Text><Text fontSize={['xl', '3xl']} color="green">  days left</Text>
+                        <Text fontSize={['xl', '3xl']} color="green">{daysLeft.author} you have </Text><Text fontSize={['3xl', '5xl']} color="red" fontWeight="bold">{daysLeft.days}</Text><Text fontSize={['xl', '3xl']} color="green">  {daysLeft.author == "Evan" ? `till prelims` :`days left`}</Text>
                     </HStack>
                     :
                     <Text fontSize={['xl', '4xl']} color="red">{daysLeft.author} your dates are over</Text>
