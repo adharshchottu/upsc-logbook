@@ -1,5 +1,15 @@
 export const historyBC = [
     {
+        "year": 8000,
+        "history": "Beggining of agriculture",
+        "notes": "Sulaiman and Kirthar hills in Pakistan"
+    },
+    {
+        "year": 8000,
+        "history": "Beggining of settlement at Mehrgarh",
+        "notes": "today in Pakistan"
+    },
+    {
         "year": 2500,
         "history": "2500-1700 B.C.",
         "notes": "The Harappa culture"
@@ -10,6 +20,11 @@ export const historyBC = [
         "notes": "They came from North-eastern Iran and the region around the Caspian sea"
     },
     {
+        "year": 1500,
+        "history": "Rigveda",
+        "notes": "a collection of hymns and verses written in vedic Sanskrit around 1500-1200 B.C."
+    },
+    {
         "year": 1200,
         "history": "1200-800 and later",
         "notes": "eastward expansion of Aryans into the Ganga valley was made easier by the discovery of the use of iron"
@@ -17,7 +32,6 @@ export const historyBC = [
     {
         "year": 600,
         "history": "The rise of the sixteen mahajanapadas of North India",
-        "notes": "the sub notes"
     },
     {
         "year": 599,
