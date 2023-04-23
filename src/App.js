@@ -12,6 +12,7 @@ import Resources from './pages/Resources'
 import Articles from './pages/Articles'
 import { BackToTop } from './Components/Back-to-top'
 import History from './pages/History'
+import Quiz from './pages/Quiz'
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Route path="/resources" element={<Resources />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/history" element={<History />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
       <Footer />
     </FirebaseContextProvider>

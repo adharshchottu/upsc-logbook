@@ -1,4 +1,5 @@
-import { Badge, Box, Center, Checkbox, Grid, GridItem, Stack, Text } from "@chakra-ui/react";
+import { Badge, Box, Button, Center, Checkbox, Flex, Grid, GridItem, Stack, Text } from "@chakra-ui/react";
+import { Link } from 'react-router-dom'
 import { useEffect } from "react";
 import { useState } from "react";
 import { articles } from "./data/articles";
@@ -139,6 +140,9 @@ const Articles = () => {
                 Articles
             </Text>
         </Center>
+        <Flex justifyContent={["center", "flex-end"]} m={3}>
+            <Link to="/quiz"><Button colorScheme='blue'>Quiz</Button></Link>
+        </Flex>
         <Center>
             <Stack spacing={[1, 5]} direction={['column', 'row']} mx={"2"}>
                 <Checkbox size='lg' colorScheme='linkedin' defaultChecked
