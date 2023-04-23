@@ -6,8 +6,8 @@ export const articles = [
     },
     {
         "articleNo": "2",
-        "article": `The President of India has the power to admit new states or territories 
-        into the union and to set the terms and conditions for doing so.`,
+        "article": `The Parliament may by law admit new states into the union of India or establish new states 
+        on such terms and conditions as it deems fit.`,
         "part": "I"
     },
     {
@@ -366,7 +366,7 @@ export const articles = [
     },
     {
         "articleNo": "43(a)",
-        "article": `he State shall take steps, by suitable legislation or in any other way, to secure the participation 
+        "article": `The State shall take steps, by suitable legislation or in any other way, to secure the participation 
         of workers in the management of undertakings, establishments or other organisations engaged in any industry`,
         "part": "IV"
     },
@@ -377,7 +377,8 @@ export const articles = [
     },
     {
         "articleNo": "45",
-        "article": `Provision for free and compulsory education for children`,
+        "article": `The State shall endeavour to provide early childhood care and education for 
+        all children until they complete the age of six years.`,
         "part": "IV"
     },
     {
